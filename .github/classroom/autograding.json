@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Aufgabe1_1",
+      "setup": "g++ -o trapez trapez.cc",
+      "run": "./trapez | grep \"A1: f\"",
+      "input": "",
+      "output": "A1: f:19.5 == 19.5:ja\r\nA1: f:19.5 == 19.5:ja\r\nA1: f:19.5 == 19.5:ja\r\nA1: f:19.5 == 19.5:ja",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Aufgabe_1_2",
+      "setup": "g++ -o trapez trapez.cc",
+      "run": "./trapez | grep \"A1: g\"",
+      "input": "",
+      "output": "A1: g(1) = 2 ?ja\r\nA1: g0:-10.5 == -10.5:ja\r\nA1: g1:-3.75 == -3.75:ja\r\nA1: g2:-2.0625 == -2.0625:ja",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Aufgabe_1_Richardson",
+      "setup": "g++ -o trapez trapez.cc",
+      "run": "./trapez | grep \"A1: Richardson\"",
+      "input": "",
+      "output": "A1: Richardson : -1.5 : ja",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 100
+    },
+    {
+      "name": "Aufgabe_2",
+      "setup": "g++ -o trapez trapez.cc",
+      "run": "./trapez | grep \"A2: \"",
+      "input": "",
+      "output": "A2: alle Eintraege für f sind 1.5:ja\r\nA2: korrekte Zahl an Einträgen:ja\r\nA2: R[1][1] und R[2][1] für g gleich -1.5:  ja",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1000
+    }
+  ]
+}
